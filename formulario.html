@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulários</title>
+</head>
+<body>
+
+	<h1> Formulário - Cadastro de Professor</h1>
+
+	<fieldset>
+	<legend align="center"><b>Dados Pessoais</b></legend>
+	 <form>
+
+	 	<label for="nome">Nome:</label><br>
+		<input type="text" id="nome" name="nome" size="25" maxlength="50" 
+		 minlength="3" required placeholder="Digite o seu nome">	
+
+	 	<br><br>
+
+	 	<label for="telefone">Telefone:</label><br>
+	 	<input type="tel" name="telefone" id="telefone" size="25" maxlength="11" minlength="11" required>
+
+	 	<br><br>
+	 	
+	 	<label for="e-mail">E-mail:</label><br>
+	 	<input type="email" name="e-mail" id="e-mail" size="25" maxlength="15" required>
+
+		<br><br>
+	 	
+	 	Foto<br>
+	 	<input type="file" name="foto" id="foto" accept=".jpg,.png">
+		
+	 	<br><br>
+
+		<label for="dataNascimento">Data Nascimento:</label><br>
+		<input type="date" name="dataNascimento" id="dataNascimento">
+
+		<br><br>
+
+		<label for="idade">Idade:</label><br>
+		<input type="number" name="idade" id="idade" max="65" min="21" step="2">
+
+		<br><br>
+
+		<label for="senha">Senha:</label><br>
+		<input type="password" id="senha" name="senha" minlength="6" maxlength="12" required
+		size="12">
+
+		<br><br>
+
+		<label for="sexo"> Sexo: </label><br>
+		Feminino <input type="radio" id="sexo" name="sexo" value="F" checked>
+		Masculino <input type="radio" id="sexo" name="sexo" value="M">
+		Não Informar <input type="radio" id="sexo" name="sexo" value="NI">
+
+		<br><br>
+
+		</fieldset>		
+
+		<br><br>
+
+		
+		<fieldset>
+			<legend align="center"><b>Dados Profissionais</b></legend>
+
+			Data e hora do cadastro:<br>
+		<input type="datetime-local" name="dataHoraCadastro" id="dataHoraCadastro">
+
+		<br><br>
+
+		Cargo:<br>
+		<input type="text" value="Professor(a)" readonly name="professor" id="professor">
+
+		<br><br>
+
+		Cargo:<br>
+		<input type="text" value="Professor(a)" disabled name="professor" id="professor">
+
+		<br><br>
+
+		Cor de Uniforme:<br>
+		<input type="color" id="corUniforme" name="corUniforme" value="#FF0000" list="cores">
+
+		<datalist id="cores">
+			<option value="#FF0000">Vermelho</option>
+			<option value="#000000">Preto</option>
+			<option value="#993399">Roxo</option>
+		</datalist>	
+
+		<br><br>
+
+		Períodos de aula<br>
+		Manhã <input type="checkbox" name="Manhã" id="Manhã" value="M">
+		Tarde <input type="checkbox" name="Tarde" id="Tarde" value="T" checked>
+		Noite <input type="checkbox" name="Noite" id="Noite" value="N">
+
+		<br><br>
+
+		Horário de entrada:<br>
+		<input type="time" name="horaEntrada" id="horaEntrada">
+
+		<br><br>
+
+		Mês de início:<br>
+		<input type="month" name="mesInicio" id="mesInicio">
+
+		<br><br>
+
+		Semana de início:<br>
+		<input type="week" name="semanaInicio" id="semanaInicio">
+
+		<br><br>
+
+		Curso:<br>
+		<select id="curso" name="curso">
+			<option value="DS" selected>Dev. Sistemas</option>
+			<option value="ED">Edificações</option>
+			<option value="EN">Enfermagem</option>
+			<option value="GE">Geodésia</option>
+			<option value="ME">Mecânica</option>
+			<option value="QU">Qualidade</option>
+		</select>
+
+		<br><br>
+
+		Disciplinas:<br><small>(ctrl + click)</small><br>
+		<select id="disciplinas" name="disciplinas" size="4" multiple>
+			<option value="BD">Banco de Dados</option>
+			<option value="DAW">DAW</option>
+			<option value="APSI">APSI</option>
+			<option value="LOG">Lógica</option>
+		</select>
+		
+		<br><br>
+
+		Veículo que utilizará no campus:<br>
+		<select name="veiculo">
+			<optgroup label="Carros">
+				<option value="GM"> GM </option>
+				<option value="VW"> VW </option>
+				<option value="Renault">  Renault </option>
+			</optgroup>
+
+			<optgroup label="Motos">
+				<option value="Honda">Honda</option>
+				<option value="Yamaha">Yamaha</option>
+				<option value="Suzuki">Suzuki</option>
+			</optgroup>
+		</select>
+		
+		</fieldset>
+		
+
+			<br><br>
+
+		<input type="submit" value="Cadastrar">
+
+	 </form>
+
+</body>
+</html>
